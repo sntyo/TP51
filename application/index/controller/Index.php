@@ -17,10 +17,27 @@ class Index
     {
         //1. 使用Config类
         //获取全部配置项
-//        dump(Config::get());
+        //dump(Config::get());
 
         //仅获取某一个一级配置项: qpp
-        dump(Config::get('app.'));
+//        dump(Config::get('app.'));
+//        dump(Config::pull('app'));//pull后不要加.
+//          dump(Config::has('default_lang'));//默认app.php配置文件中查找
+//          dump(Config::has('app.default_lang'));
+//          dump(Config::get('app.default_lang'));//先查寻获，后获取
+          //使用Config类的静态函数
+
+        //2.助手函数config(),不需要导入配置类
+//        dump(config());//获取到了全部配置项
+//        dump(config('database.'));//获取database.php一级配置项
+//        dump(config('?default_lang'));
+//        dump(config('default_lang'));
+
+        //3. 动态配置
+//          Config::set('app.admin_email', 'sntyo@yhsy.cn');
+//          dump(Config::pull('app'));//查看app.php是否有此动态配置项
+//          dump(Config::get('app.admin_email'));
+//          return (Config::get('app.admin_email'));
 
     }
 }
