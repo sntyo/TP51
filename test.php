@@ -24,6 +24,8 @@ class Index
 }
 
 
+echo "test github remote ";
+
 
 
 
