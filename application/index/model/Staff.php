@@ -44,7 +44,7 @@ class Staff extends Model
 
     protected function getSalaryAttr($value, $data)
     {
-        return $data['name'].'的工资是:'.($value+200);  //生成用户订单是常用
+        return $data['name'].'的工资是:'.($value+200);  //生成用户订单是常用a
     }
 
     protected function getStaffInfoAttr($value, $data)
