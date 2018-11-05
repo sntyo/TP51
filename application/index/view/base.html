@@ -1,0 +1,24 @@
+{block name="header"}
+{include file="public/header" /}
+{/block}
+
+{//主体部分内容指示在base中的提示，子模板已重写覆盖}
+{block name="main"}主体部分{/block}
+{block name="course"}课程名称:{/block} <br>
+
+{//site区块,在子模块中未进行重写,会原样显示}
+{block name="site"}PHP中文网{/block} <br>
+
+{block name='name'}朱老师{/block}
+
+{block name="footer"}
+{include file="public/footer" /}
+{/block}
+
+{//<h3>标签中的内容会原样输出到子模板中}
+    <h3>我是基础模板中的标题内容</h3>
+
+    {/*
+    1.基础模板中,应该只有block标签,而不应该有其它的标签;
+    2.写在block标签之外内容,会原样输出到子模板中
+    */}

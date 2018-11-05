@@ -32,4 +32,10 @@ return [
     'taglib_begin' => '{',
     // 标签库标签结束标记
     'taglib_end'   => '}',
+
+    //模板布局的配置
+//    'layout_on' => true, //开启模板布局
+//    'layout_name' => 'layout' //指定模板布局文件
+
+
 ];

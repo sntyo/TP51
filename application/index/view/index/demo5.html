@@ -1,0 +1,26 @@
+{extend name="base" /}
+
+{//将父模板中的main区块进行重新}
+{block name="main"}
+<h1 style="text-align: center">我是子模板的网站的主体部分</h1>
+{/block}
+
+{block name="course"}
+{__block__}: PHP编程
+{/block}
+
+{//清除基础模板中name区块的内容}
+{block name="name"}{/block}
+
+
+{/*
+1.子模板中,只能对基础模板中的区块block进行重写;
+2.子模板中不能写其它内容,否则会直接忽略掉;
+4.子模块中未重写的区块内容,将原样显示
+3.子模拟中的区块顺序无所谓;
+4.如果子模块中的区块内容为空,则是清除区块中的原内容
+*/}
+
+{//在子模板中凡是写在了block之外的内容全部忽略}
+<a href="http://www.php.cn">欢迎访问PHP中文网</a>
+
